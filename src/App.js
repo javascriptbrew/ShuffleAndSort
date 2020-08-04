@@ -81,8 +81,8 @@ function App() {
           }
         </div>
         <div className="side">
-          <div><button onClick={handleShuffle}>Shuffle</button></div>
-          <div><button onClick={handleSort}>Sort</button></div>
+          <button onClick={handleShuffle}>Shuffle</button>
+          <button onClick={handleSort}>Sort</button>
         </div>
 
       </div>
