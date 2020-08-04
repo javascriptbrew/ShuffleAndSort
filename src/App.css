@@ -32,6 +32,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 30px;
 }
 .flex-container div.side button{
 	margin: 0 10px;
@@ -80,6 +81,7 @@
   .flex-container div.side{
     flex: 100%;
     order: 1;
+    padding-top: 10px;
   }
   .flex-container div.main{
     flex: 100%;
