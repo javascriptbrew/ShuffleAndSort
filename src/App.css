@@ -1,38 +1,101 @@
-.App {
+.App{
+  padding-top:  50px;
+}
+.appName{
   text-align: center;
+  font-size: 18px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #efefef;
+}
+
+.main {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  background-color: #f1f1f1;
+}
+.main div{
+  flex: 33%;
   color: white;
+  margin: 0px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 50px;
+  height:150px;
+  line-height: 150px;
 }
-
-.App-link {
-  color: #61dafb;
+.flex-container div.side{
+	order: 2;
+  flex: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.flex-container div.side button{
+	margin: 0 10px;
+  width: 90%;
+  max-width: 200px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #72C3DC;
+  border-radius: 5px;
+  border-width: 0 0 5px 0;
+  border-bottom: 5px solid #2B8EAD;
+  outline: none;
+  cursor: pointer;
+}
+.flex-container div.side button:active{
+  border-bottom: 0px;
+}
+.flex-container div.main{
+	order: 1;
+  flex: 80%;
+}
+.flex-container div.main, .flex-container div.side {
+  background-color: #fff;
+  color: white;
+  margin: 10px;
+}
+.creatorName{
+  padding: 5px 10px;
+  font-size: 12px;
+  font-style: italic;
+}
+@media screen and (max-width: 375px) {
+  .App{
+    padding-top: 0;
   }
-  to {
-    transform: rotate(360deg);
+  .appName{
+    background-color: #333333;
+    color: #fff;
+    padding: 10px;
+  }
+  .flex-container {
+    flex-wrap: wrap;
+    background-color: #fff;
+  }
+  .flex-container div.side{
+    flex: 100%;
+    order: 1;
+  }
+  .flex-container div.main{
+    flex: 100%;
+    order: 2;
+  }
+  .flex-container div.main div{
+    flex: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: #333;
+    border-left: 10px solid #2B8EAD;
+    margin-bottom: 3px;
+  }
+  .flex-container div.side button{
+    max-width: 80px;
+    align-items: stretch;
   }
 }
