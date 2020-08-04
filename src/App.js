@@ -76,7 +76,7 @@ function App() {
             boxData.map((val) => {
               const mobileWidth = size.width <= 375;
 
-              return <div key={val.boxNumber} style={mobileWidth ? { 'border-left-color': val.color } : { 'backgroundColor': val.color }}>{val.boxNumber}</div>
+              return <div key={val.boxNumber} style={mobileWidth ? { 'borderLeftColor': val.color } : { 'backgroundColor': val.color }}>{val.boxNumber}</div>
             })
           }
         </div>
